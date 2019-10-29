@@ -14,12 +14,8 @@ export class AppComponent {
   post() {
     // sending text to node
     $.post('http://localhost:3000/save', {text: this.name}, (data) => {
-      console.log(data);
+      document.location.href = 'http://localhost:4200/view/' + data.filename;
+      console.log(data.filename);
     }, 'json');
-  }
-  copytxt(inputElement) {
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
   }
 }

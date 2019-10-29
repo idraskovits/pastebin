@@ -1,7 +1,11 @@
-<button>Share</button>
-<button>Copy</button>
-<div>
-  <label for="Fname"></label>
-  <textarea id="text-space" name="Fname"></textarea>
-  <p>{{ name }}</p>
+<div class="container-fluid">
+    <div class="row">
+        <button type="button" class="btn btn-secondary" id="savebtn" (click)="copycontent()">Copy contents</button>
+        <button type="button" class="btn btn-secondary" id="btn2" (click)="copylink()">Copy share link</button>
+      <h4 class="text-left" id="header-text"><strong>Your friend sent you this:</strong></h4>
+    </div>
 </div>
+<div>
+    <textarea id="text-space" name="Fname" readonly></textarea>
+</div>
+<h6 class="text-center" id="footer-text">Created by Imre Draskovits</h6>

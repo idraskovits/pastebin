@@ -1,8 +1,13 @@
-<button (click)="post()">Save</button>
-<button (click)="copytxt()">Copy</button>
-<div>
-  <label for="Fname"></label>
-  <label for="text-space"></label>
-  <textarea id="text-space" name="Fname" [(ngModel)]="name"></textarea>
-  <p>{{ name }}</p>
+<div class="container-fluid">
+    <div class="row">
+        <button type="button" class="btn btn-secondary"(click)="post()" id="savebtn">Save & share</button>
+        <h5 id="header-text" class="text-left"><strong>Paste any of your text here and share it with your friends!</strong></h5>
+    </div>
 </div>
+
+<div>
+    <label for="text-space"></label>
+    <textarea id="text-space" name="Fname" [(ngModel)]="name"></textarea>
+</div>
+
+<h6 class="text-center" id="footer-text">Created by Imre Draskovits</h6>

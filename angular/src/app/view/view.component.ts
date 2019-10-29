@@ -18,7 +18,16 @@ export class ViewComponent implements OnInit {
     console.log(name);
 
     $.get('http://localhost:3000/read/' + name, (data) => {
-      $('#text-space').append(data);
+        $('#text-space').append(data);
     });
   }
+
+  copylink() {
+        navigator.clipboard.writeText(location.href);
+  }
+  copycontent() {
+        navigator.clipboard.writeText(document.getElementById('text-space').textContent);
+  }
 }
+
+

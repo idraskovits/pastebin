@@ -28,7 +28,7 @@ app.post('/save', (req, res) => {
         console.log("Was cool bruh");
     });
     
-    return res.send('Received a POST HTTP method');
+    return res.send(JSON.stringify({'filename': filename}));
 
 });
 
